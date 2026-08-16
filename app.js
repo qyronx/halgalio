@@ -362,7 +362,7 @@ function send(type, data) {
 // ---- connection ----
 function connect() {
   const proto = location.protocol === "https:" ? "wss:" : "ws:";
-  ws = new WebSocket(`${proto}//${location.host}/ws`);
+  ws = new WebSocket(`wss://halgalio.onrender.com/ws`);
   ws.onmessage = (ev) => {
     let msg;
     try {
